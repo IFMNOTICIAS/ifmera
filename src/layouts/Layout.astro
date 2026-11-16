@@ -22,6 +22,8 @@ const {
 
 const siteUrl = 'https://ifmeralabai.com';
 const canonical = new URL(Astro.url.pathname, siteUrl).href;
+// Imagen OG servida desde el host .web.app (siempre activo, no depende del SSL del dominio)
+const ogImage = 'https://ifmeralabai.web.app/og.png';
 ---
 
 <!doctype html>
@@ -44,7 +46,7 @@ const canonical = new URL(Astro.url.pathname, siteUrl).href;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="es_ES" />
-    <meta property="og:image" content={`${siteUrl}/og.png`} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
@@ -54,7 +56,7 @@ const canonical = new URL(Astro.url.pathname, siteUrl).href;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${siteUrl}/og.png`} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
     <slot />
