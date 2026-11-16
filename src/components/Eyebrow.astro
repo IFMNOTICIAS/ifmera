@@ -1,0 +1,8 @@
+---
+import Isotipo from './Isotipo.astro';
+interface Props {
+  label: string;
+}
+const { label } = Astro.props;
+---
+<span class="eyebrow eyebrow--iso"><Isotipo size={15} />{label}</span>

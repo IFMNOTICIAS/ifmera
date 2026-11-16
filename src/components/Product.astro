@@ -1,4 +1,5 @@
 ---
+import Eyebrow from './Eyebrow.astro';
 const features = [
   { t: 'Redacción asistida por IA', d: 'Generación, extensión y edición de notas con criterio editorial y mínimos de calidad configurables.' },
   { t: 'Mediateca inteligente', d: 'Búsqueda por personas, logos y contexto; deduplicación y optimización automática de imágenes.' },
@@ -17,7 +18,7 @@ const rows = [
 <section id="cms" class="product">
   <div class="wrap">
     <div class="col">
-      <span class="eyebrow">La plataforma</span>
+      <Eyebrow label="La plataforma" />
       <h2>Un CMS pensado por quienes publican todos los días.</h2>
       <p class="lead">Nuestra plataforma no adapta un gestor genérico: parte de cómo funciona de verdad una redacción moderna y pone la IA donde ahorra tiempo sin quitar el control editorial.</p>
       <ul class="feat">

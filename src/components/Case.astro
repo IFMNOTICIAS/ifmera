@@ -1,4 +1,5 @@
 ---
+import Eyebrow from './Eyebrow.astro';
 const meta = [
   { n: 'Redacción', l: 'entorno de prueba real' },
   { n: 'Cloud', l: 'infraestructura escalable' },
@@ -7,7 +8,7 @@ const meta = [
 ---
 <section id="caso" class="case">
   <div class="wrap">
-    <span class="eyebrow">Caso real</span>
+    <Eyebrow label="Caso real" />
     <h2>IFM Noticias: el laboratorio probándose a sí mismo.</h2>
     <p>Cada módulo de IFMERA se despliega primero en una redacción que publica en vivo las 24 horas. Lo que ofrecemos a otros medios ya pasó por la exigencia de la operación diaria: no es un demo, es infraestructura en producción.</p>
     <div class="meta">
