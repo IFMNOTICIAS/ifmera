@@ -1,0 +1,17 @@
+---
+const bars = [0, 0.1, 0.25, 0.15, 0.35, 0.05, 0.3, 0.2, 0.4, 0.12, 0.28, 0.08];
+---
+<section class="hero">
+  <div class="wrap">
+    <span class="hero-tag"><span class="dot"></span>Laboratorio de Inteligencia Artificial</span>
+    <h1>Construimos la <span class="grad">inteligencia</span> detrás de los medios digitales.</h1>
+    <p class="lead">IFMERA Lab AI diseña y desarrolla la próxima generación de CMS y flujos de trabajo con IA para portales de información. Investigación aplicada, producto real, resultados medibles.</p>
+    <div class="hero-actions">
+      <a href="#servicios" class="btn btn-primary">Ver qué hacemos</a>
+      <a href="#cms" class="btn btn-ghost">Conocer la plataforma</a>
+    </div>
+    <div class="eqbars" aria-hidden="true">
+      {bars.map((d) => <span style={`animation-delay:${d}s`}></span>)}
+    </div>
+  </div>
+</section>

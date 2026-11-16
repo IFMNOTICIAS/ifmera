@@ -1,0 +1,77 @@
+---
+const services = [
+  {
+    num: '01 — Estrategia',
+    title: 'Asesoría e Inteligencia Artificial',
+    text: 'Evaluamos dónde la IA genera valor real en tu organización y trazamos una hoja de ruta concreta. Nada de experimentos: casos de uso priorizados por impacto y viabilidad.',
+    tags: ['Diagnóstico', 'Hoja de ruta IA', 'Casos de uso', 'Capacitación'],
+    icon: '<path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/>',
+  },
+  {
+    num: '02 — Evolución',
+    title: 'Transformación Digital',
+    text: 'Modernizamos la infraestructura y los procesos de medios y empresas: migración a la nube, automatización y métricas que importan. Menos fricción, más velocidad.',
+    tags: ['Cloud', 'Automatización', 'Analítica', 'Procesos'],
+    icon: '<path d="M4 7h16M4 12h16M4 17h10"/><path d="M15.5 15.5l2 2 3.5-3.5"/>',
+  },
+  {
+    num: '03 — Producto',
+    title: 'CMS Personalizado',
+    text: 'Diseñamos y desarrollamos el gestor de contenidos a la medida de tu redacción, con IA integrada: redacción asistida, mediateca inteligente, pauta y publicación en tiempo real.',
+    tags: ['IA integrada', 'Mediateca', 'Publicidad', 'Tiempo real'],
+    icon: '<rect x="3.5" y="4" width="17" height="13" rx="2"/><path d="M3.5 8h17M7 20h10M12 17v3"/><path d="M6.5 11.2h4M6.5 13.6h7"/>',
+  },
+  {
+    num: '04 — Operación',
+    title: 'Gestión de Flujos Digitales',
+    text: 'Orquestamos tus procesos editoriales y de contenido de punta a punta: ingesta automática, revisión, aprobación y distribución multicanal. Todo auditable y bajo control.',
+    tags: ['Ingesta', 'Workflows', 'Multicanal', 'Trazabilidad'],
+    icon: '<circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M6 8.4v3a2 2 0 0 0 2 2h3M18 8.4v3a2 2 0 0 1-2 2h-3"/>',
+  },
+];
+
+const integration = [
+  { title: 'Flujos para periodistas', text: 'Asignación, redacción y revisión en un mismo tablero editorial.', icon: '<path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M14 6l4 4"/>' },
+  { title: 'Gestión de publicidad', text: 'Campañas, topes e inventario integrados al contenido.', icon: '<path d="M4 10v4h3l7 4V6L7 10H4z"/><path d="M17 9a3 3 0 0 1 0 6"/>' },
+  { title: 'Gestión de métricas', text: 'Audiencia y rendimiento en tiempo real, en un solo panel.', icon: '<path d="M5 20V12M10 20V6M15 20v-5M20 20V9"/>' },
+  { title: 'Diseño gráfico', text: 'Plantillas y piezas visuales conectadas a cada publicación.', icon: '<circle cx="8" cy="9" r="3.3"/><rect x="13" y="12" width="7" height="7" rx="1.2"/>' },
+  { title: 'Edición fotográfica', text: 'Optimización y ajuste de imágenes dentro del propio flujo.', icon: '<rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M4 17l5-4 4 3 3-2 4 3"/>' },
+  { title: 'Entornos de terceros', text: 'Conexión con redes, agencias y servicios externos.', icon: '<path d="M9 15l6-6"/><path d="M8 11l-2 2a3 3 0 0 0 4 4l2-2M16 13l2-2a3 3 0 0 0-4-4l-2 2"/>' },
+  { title: 'Control administrativo', text: 'Roles, permisos y trazabilidad de toda la operación.', icon: '<path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6l7-3z"/><path d="M9 12l2 2 4-4"/>' },
+];
+---
+<section id="servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Servicios</span>
+      <h2>Cinco frentes para transformar tu operación digital.</h2>
+      <p>Desde el diagnóstico estratégico hasta la plataforma a medida, y la integración que une toda la gestión editorial en un solo entorno. Acompañamos cada etapa con IA aplicada y criterio editorial.</p>
+    </div>
+
+    <div class="svc-grid">
+      {services.map((s) => (
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" set:html={s.icon}></svg></div>
+          <div class="num" style="margin-top:1rem">{s.num}</div>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+          <ul>{s.tags.map((t) => <li>{t}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+
+    <article class="card card-wide">
+      <span class="num">05 — Integración</span>
+      <h3>Integración Digital para la Gestión Editorial</h3>
+      <p>Un único entorno que conecta todas las áreas de la operación. Lo que antes vivía en herramientas sueltas y desconectadas —redacción, pauta, datos, diseño— ahora fluye en un mismo sistema: sincronizado, auditable y bajo control.</p>
+      <div class="integ">
+        {integration.map((i) => (
+          <div class="integ-item">
+            <span class="mi"><svg viewBox="0 0 24 24" set:html={i.icon}></svg></span>
+            <div><b>{i.title}</b><span>{i.text}</span></div>
+          </div>
+        ))}
+      </div>
+    </article>
+  </div>
+</section>

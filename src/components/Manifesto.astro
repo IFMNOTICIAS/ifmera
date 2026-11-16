@@ -1,0 +1,24 @@
+---
+const stats = [
+  { n: '+6', l: 'módulos en producción' },
+  { n: '24/7', l: 'operación real' },
+  { n: 'IA', l: 'aplicada, no teórica' },
+];
+---
+<section id="que-es" class="manifesto">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow">El laboratorio</span>
+      <p class="big">Nacimos dentro de una redacción, no en un laboratorio aislado. IFMERA convierte la experiencia real de operar un medio digital en <b>tecnología que cualquier portal puede usar.</b></p>
+    </div>
+    <div class="col">
+      <p>IFMERA Lab AI es la división de investigación y desarrollo de inteligencia artificial del ecosistema IFM. Diseñamos sistemas que entienden cómo trabaja una redacción: la velocidad de la última hora, el rigor editorial, la pauta publicitaria y la operación diaria.</p>
+      <p>No vendemos promesas de IA. Construimos herramientas que ya funcionan en producción y las ponemos al servicio de otros medios, empresas y proyectos digitales.</p>
+      <div class="stats">
+        {stats.map((s) => (
+          <div><div class="n">{s.n}</div><div class="l">{s.l}</div></div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

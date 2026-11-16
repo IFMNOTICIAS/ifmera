@@ -1,0 +1,19 @@
+---
+const meta = [
+  { n: 'Redacción', l: 'entorno de prueba real' },
+  { n: 'Cloud', l: 'infraestructura escalable' },
+  { n: 'IA', l: 'en cada etapa editorial' },
+];
+---
+<section id="caso" class="case">
+  <div class="wrap">
+    <span class="eyebrow">Caso real</span>
+    <h2>IFM Noticias: el laboratorio probándose a sí mismo.</h2>
+    <p>Cada módulo de IFMERA se despliega primero en una redacción que publica en vivo las 24 horas. Lo que ofrecemos a otros medios ya pasó por la exigencia de la operación diaria: no es un demo, es infraestructura en producción.</p>
+    <div class="meta">
+      {meta.map((m) => (
+        <div><div class="n">{m.n}</div><div class="l">{m.l}</div></div>
+      ))}
+    </div>
+  </div>
+</section>

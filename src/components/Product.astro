@@ -1,0 +1,44 @@
+---
+const features = [
+  { t: 'Redacción asistida por IA', d: 'Generación, extensión y edición de notas con criterio editorial y mínimos de calidad configurables.' },
+  { t: 'Mediateca inteligente', d: 'Búsqueda por personas, logos y contexto; deduplicación y optimización automática de imágenes.' },
+  { t: 'Publicación en tiempo real', d: 'Flujo de revisión con presencia en vivo y caché que nunca congela lo que ya está publicado.' },
+  { t: 'Pauta y analítica', d: 'Gestión publicitaria con topes de impresión y proyecciones integradas al panel.' },
+];
+
+const rows = [
+  { pill: 'IA', pillClass: 'ai', text: 'Generando borrador — 620 palabras', state: 'En revisión', stateClass: '' },
+  { pill: '● LIVE', pillClass: 'live', text: 'Última hora: resultados electorales', state: 'Publicado', stateClass: '' },
+  { pill: 'IMG', pillClass: '', text: 'Mediateca · 3 coincidencias optimizadas', state: 'Auto', stateClass: 'ai' },
+  { pill: 'ADS', pillClass: '', text: 'Campaña home · 74% del tope', state: 'Activa', stateClass: '' },
+  { pill: '↻', pillClass: '', text: 'Ingesta automática · 12 notas hoy', state: 'Cola', stateClass: '' },
+];
+---
+<section id="cms" class="product">
+  <div class="wrap">
+    <div class="col">
+      <span class="eyebrow">La plataforma</span>
+      <h2>Un CMS pensado por quienes publican todos los días.</h2>
+      <p class="lead">Nuestra plataforma no adapta un gestor genérico: parte de cómo funciona de verdad una redacción moderna y pone la IA donde ahorra tiempo sin quitar el control editorial.</p>
+      <ul class="feat">
+        {features.map((f) => (
+          <li><span class="k">→</span><div><b>{f.t}</b><span class="d">{f.d}</span></div></li>
+        ))}
+      </ul>
+    </div>
+    <div class="col">
+      <div class="panel" aria-hidden="true">
+        <div class="bar"><i></i><i></i><i></i><span class="t">ifmera · redacción</span></div>
+        <div class="body">
+          {rows.map((r) => (
+            <div class="row">
+              <span class={`pill ${r.pillClass}`} set:html={r.pill}></span>
+              <span class="grow">{r.text}</span>
+              <span class={`pill ${r.stateClass}`}>{r.state}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
